@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Calculator</title>
-		<meta charset="utf-8">
-	</head>
-	<body>
-		<h1>Sergio Maurice Romaguera Pérez</h1>
-		Number:
-		<input type="text" id="n1">
-		<p>
+
+<head>
+    <title>Calculator</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <h1>Sergio Maurice Romaguera Pérez</h1>
+    Number:
+    <input type="text" id="n1">
+    <p>
 			<button onclick="inverse()"> 1/x </button>
 			<button onclick="square()"> x^2 </button>
-			<button onclick="cube()"> x^3 </button>
-		</p>
-		<script type="text/javascript">
-			function cube() {
-				var num = document.getElementById("n1");
-				num.value = Math.pow(num.value, 3);
-			}
+        <button onclick="cube()"> x^3 </button>
+        <button onclick="sine()"> sin </button>
+    </p>
+    <script type="text/javascript">
+        function cube() {
+            var num = document.getElementById("n1");
+            num.value = Math.pow(num.value, 3);
+        }
 			function square() {
 				var num = document.getElementById("n1");
 				num.value = Math.pow(num.value, 2);
@@ -26,6 +29,11 @@
 				var num = document.getElementById("n1");
 				num.value = 1/num.value;
 			}
-		</script>
-	</body>
+        function sine() {
+            var num = document.getElementById("n1");
+            num.value = Math.sin(num.value);
+        }
+    </script>
+</body>
+
 </html>
